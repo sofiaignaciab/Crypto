@@ -1,0 +1,1 @@
+docker run –rm -it -p 8880:80 –platform linux/amd64 vulnerables/web-dvwa
