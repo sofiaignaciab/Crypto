@@ -9,3 +9,6 @@ hashcat -D 1 -m 22000 handshake.22000 rockyou_mod.dic --potfile-disable
 
 #aircrack-ng
 aircrack-ng -a2 -w rockyou_mod.dic handshake.pcap
+
+#install PyCrack
+git clone https://github.com/nogilnick/PyCrack
