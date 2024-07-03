@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  c1:
+    build:
+      context: ./C1
+      dockerfile: Dockerfile
+    container_name: c1
+    restart: unless-stopped
+    networks:
+      - lab-network
+
+  c2:
+    build:
+      context: ./C2
+      dockerfile: Dockerfile
+    container_name: c2
+    restart: unless-stopped
+    networks:
+      - lab-network
+
+  c3:
+    build:
+      context: ./C3
+      dockerfile: Dockerfile
+    container_name: c3
+    restart: unless-stopped
+    networks:
+      - lab-network
+
+  c4_s1:
+    build:
+      context: ./C4_S1
+      dockerfile: Dockerfile
+    container_name: c4_s1
+    restart: unless-stopped
+    networks:
+      - lab-network
+    ports:
+      - "2222:22"
+
+networks:
+  lab-network:
+    driver: bridge
