@@ -7,7 +7,7 @@ RUN echo 'deb http://old-releases.ubuntu.com/ubuntu groovy main multiverse restr
     echo 'deb http://old-releases.ubuntu.com/ubuntu groovy-updates main multiverse restricted universe' >> /etc/apt/sources.list
 
 RUN apt-get update && \
-    apt-get install -y openssh-client && \
+    apt-get install -y openssh-client tcpdump vim autoconf libssl-dev zlib1g-dev gcc make git && \
     apt-get clean
 
 WORKDIR /data

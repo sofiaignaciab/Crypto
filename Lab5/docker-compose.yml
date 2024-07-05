@@ -7,6 +7,8 @@ services:
       dockerfile: Dockerfile
     container_name: c1
     restart: unless-stopped
+    tty: true
+    command: /bin/bash
     networks:
       - lab-network
 
@@ -16,6 +18,8 @@ services:
       dockerfile: Dockerfile
     container_name: c2
     restart: unless-stopped
+    tty: true
+    command: /bin/bash
     networks:
       - lab-network
 
@@ -25,6 +29,8 @@ services:
       dockerfile: Dockerfile
     container_name: c3
     restart: unless-stopped
+    tty: true
+    command: /bin/bash
     networks:
       - lab-network
 
@@ -34,6 +40,8 @@ services:
       dockerfile: Dockerfile
     container_name: c4_s1
     restart: unless-stopped
+    tty: true
+    command: /usr/sbin/sshd -D
     networks:
       - lab-network
     ports:
